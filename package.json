@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "author": "nakeking <1287414150@qq.com>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "4.7.0",
+    "@monaco-editor/react": "^4.5.1",
+    "antd": "^4.24.10",
+    "react-copy-to-clipboard": "^5.1.0",
+    "umi": "^4.0.53"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-copy-to-clipboard": "^5.0.4",
+    "@types/react-dom": "^18.0.0",
+    "@umijs/plugins": "^4.0.67",
+    "typescript": "^4.1.2"
+  }
+}

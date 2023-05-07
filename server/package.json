@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "snake",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch src -e ts --exec ts-node ./src/main.ts",
+    "pm2_start": "pm2 start ./src/main.js -i 2",
+    "pm2_restart": "pm2 restart all",
+    "pm2_stop": "pm2 stop all",
+    "pm2_del": "pm2 delete all",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.2.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
+    "@types/node": "^20.1.0",
+    "cors": "^2.8.5"
+  }
+}
