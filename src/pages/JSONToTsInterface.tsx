@@ -1,5 +1,5 @@
 import { Button, Spin, message } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Editor from "@monaco-editor/react"
 
@@ -12,13 +12,27 @@ import {
 
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
+import { io } from "socket.io-client"
+
 export default function JSONToInterface() {
   const [value, setValue] = useState<string | undefined>()
   const [output, setOutput] = useState<string>("")
 
-  const handleSubmitJSON = () => {
-    setLoading(true)
+  const socket = io("ws://localhost:9528/jsonToInterface", {
+    reconnectionDelayMax: 10000
+  })
 
+  socket.on("message", function(msg) {
+    console.log(msg)
+  })
+
+  const handleSubmitJSON = () => {
+    // setLoading(true)
+
+    // ====== ws ======================
+    // socket.emit("message", JSON.stringify({value}))
+
+    // ====== http ====================
     fetch("/api/convert", {
       method: "POST",
       body: JSON.stringify({
