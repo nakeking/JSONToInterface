@@ -5,8 +5,9 @@
 
 
 #### 介绍
-前端使用 umi + React，后端使用Node.js。
-在Nodejs中和ChatGPT进行通信。
+前端使用 umi + React，后端使用Nodejs。
+集成ChatGPT API。
+接入ChatGPT stream API，提升用户体验。
 
 
 #### 示例
